@@ -19,12 +19,14 @@ function App() {
       <div className="App">
         <header className="App-header">
           <h1>Email Assistant</h1>
+        </header>
+        <div className="dashboard-layout">
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/oauth2callback/" element={<OAuth2Callback />} />
             <Route path="/ask" element={<EmailAssistant />} />
           </Routes>
-        </header>
+        </div>
       </div>
     </Router>
   );

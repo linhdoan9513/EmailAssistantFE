@@ -1,0 +1,145 @@
+.email-list-container {
+  padding: 0 18px;
+}
+
+.email-list-title {
+  color: #23272f;
+  margin-bottom: 12px;
+}
+
+.email-list-scroll {
+  overflow-y: auto;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 16px;
+  background: linear-gradient(90deg, #6366f1 60%, #818cf8 100%);
+}
+
+.email-list-ol {
+  text-align: left;
+  padding-left: 0;
+  list-style: none;
+}
+
+.email-list-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  font-size: 15px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.email-list-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #6366f1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: 14px;
+}
+
+.email-list-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.email-list-from {
+  font-weight: 600;
+  text-align: left;
+}
+
+.email-list-snippet {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.email-list-subject {
+  font-weight: 500;
+  font-size: 15px;
+  color: #374151;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-align: left;
+}
+
+.email-list-subject.clickable {
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.email-list-subject.clickable:hover {
+  color: #2563eb;
+}
+
+.email-list-preview {
+  background: #f1f5f9;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-top: 6px;
+  color: #374151;
+  font-size: 14px;
+  max-width: 100%;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.email-list-item:hover {
+  background: #e0e7ff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Loading skeleton styles */
+.email-list-item.skeleton {
+  background: #e0e7ff33;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+.email-list-avatar.skeleton {
+  opacity: 0.5;
+  background: #a5b4fc;
+}
+.email-list-content.skeleton {
+  width: 100%;
+}
+.skeleton-line {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+.skeleton-line.lg {
+  height: 12px;
+  width: 60%;
+  margin-bottom: 6px;
+}
+.skeleton-line.sm {
+  height: 10px;
+  width: 40%;
+}
+
+/* Expanded subject color */
+.email-list-subject.expanded {
+  color: #4338ca;
+}
+
+/* Expanded preview (no extra style needed, but for clarity) */
+.email-list-preview.expanded {
+  overflow: visible;
+} 
