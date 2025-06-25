@@ -16,7 +16,7 @@ const EmailAssistant = () => {
   const chatEndRef = useRef(null);
   const navigate = useNavigate();
   const API_BASE = process.env.REACT_APP_API_BASE_URL;
-  console.log("REACT_APP_API_BASE_URL =", process.env.REACT_APP_API_BASE_URL);
+  console.log("🚀 ~ EmailAssistant ~ API_BASE:", API_BASE)
 
   useEffect(() => {
     const fetchEmails = async () => {
