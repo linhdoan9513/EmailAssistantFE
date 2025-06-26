@@ -8,7 +8,7 @@ function OAuth2Callback() {
   const navigate = useNavigate();
   React.useEffect(() => {
     // After successful OAuth, redirect to /ask
-    navigate('/ask', { replace: true });
+    navigate('/email/ask', { replace: true });
   }, [navigate]);
   return <div>Logging in...</div>;
 }
@@ -26,7 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/oauth2callback/" element={<OAuth2Callback />} />
-            <Route path="/ask" element={<EmailAssistant />} />
+            <Route path="/email/ask" element={<EmailAssistant />} />
           </Routes>
         </div>
       </div>
