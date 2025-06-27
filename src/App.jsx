@@ -13,8 +13,6 @@ function OAuth2Callback() {
   return <div>Logging in...</div>;
 }
 
-console.log("🌍 API_BASE from process.env:", process.env.REACT_APP_API_BASE_URL);
-
 function App() {
   return (
     <Router>

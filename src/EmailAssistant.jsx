@@ -16,7 +16,6 @@ const EmailAssistant = () => {
   const chatEndRef = useRef(null);
   const navigate = useNavigate();
   const API_BASE = process.env.REACT_APP_API_BASE_URL;
-  console.log("🚀 ~ EmailAssistant ~ API_BASE:", API_BASE)
 
   useEffect(() => {
     const fetchEmails = async () => {
@@ -27,8 +26,9 @@ const EmailAssistant = () => {
           credentials: 'include',
         });
         const data = await res.json();
-        if (res.ok && Array.isArray(data.emails)) {
-          setEmails(data.emails);
+        if (res.ok && Array.isArray(data.threads)) {
+          console.log("🚀 ~ fetchEmails ~ data:", data)
+          setEmails(data.threads);
         } else {
           setEmailsError(data.error || 'Could not fetch emails.');
         }
@@ -61,7 +61,6 @@ const EmailAssistant = () => {
       try {
         const res = await fetch(`${API_BASE}/user/profile/`, { credentials: 'include' });
         const data = await res.json();
-        console.log("🚀 ~ fetchUserEmail ~ data:", data)
         if (res.ok && data.email) {
           setUserEmail(data.email);
         }
